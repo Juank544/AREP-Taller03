@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 public class RunTests {
     public static void main(String[] args) throws Exception {
         int passed = 0, failed = 0;
+        // Añadir el nombre de la clase Pruebas como Program Arguments
         for (Method m : Class.forName(args[0]).getMethods()) {
             if (m.isAnnotationPresent(Test.class)) {
                 try {

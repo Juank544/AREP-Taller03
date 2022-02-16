@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class InvokeMain {
     public static void main(String... args) {
         try {
-            // Añadir el nombre de la otra clase como Program Arguments
+            // Añadir el nombre de la clase ReflectionExamples como Program Arguments
             Class<?> c = Class.forName(args[0]);
             Class[] argTypes = new Class[]{String[].class};
             Method main = c.getDeclaredMethod("main", argTypes);
